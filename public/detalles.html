@@ -33,12 +33,12 @@
   <main class="main" id="top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
       data-navbar-on-scroll="data-navbar-on-scroll">
-
       <div class="container"><a class="navbar-brand d-inline-flex" href="index.html"><span
             class="text-light fs-2 fw-bold ms-2">URJC MOTORS</span></a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <a href="index.html" class="btn btn-primary" style="border-radius: 15px; background-color: rgb(199, 107, 3)">Página principal</a>
       </div>
     </nav>
     <!-- contenido de verdad -->
@@ -69,17 +69,38 @@
             <button  class="btn btn-primary" style="border-radius: 15px;">Borrar</button>
             <button  class="btn btn-primary" style="border-radius: 15px;">Editar</button>
             <button  class="btn btn-primary" style="border-radius: 15px; background-color: black;">Nuevo elemento</button>
-
+            <form>
+                <div class="form-group">
+                  <label for="input-1">Marca</label>
+                  <input class="form-control" id="input-1">
+                </div>
+                <div class="form-group">
+                  <label for="input-3">Color</label>
+                  <input class="form-control" id="input-3">
+                </div>
+                <div class="form-group">
+                  <label for="input-4">Motor</label>
+                  <input class="form-control" id="input-4">
+                </div>
+                <div class="form-group">
+                  <label for="input-5">Caballos</label>
+                  <input class="form-control" id="input-5">
+                </div>
+                <button id="guardar-bot" class="btn"
+                  style="background-color: black; border-radius: 15px;">Guardar</button>
+                <a id="cancelar-bot" class="btn" style="background-color: black;border-radius: 15px"
+                  href="index.html">Cancelar</a>
+  
+  
+              </form>
 
             
 
 
           </div>
         </div>
-        
-        <div style="margin: auto">
-            <a href="index.html" class="btn btn-primary" style="border-radius: 15px">Ver elemento</a>
-        </div>
+
+    
 
       </section>
       <!-- <section> close ============================-->
