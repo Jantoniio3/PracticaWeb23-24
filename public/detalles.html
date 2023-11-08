@@ -31,7 +31,7 @@
     <!--               Main Content                     -->
     <!-- ===============================================-->
     <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
+      <nav style="background-color: black;" class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
         data-navbar-on-scroll="data-navbar-on-scroll">
         <div class="container"><a class="navbar-brand d-inline-flex" href="index.html">
           <img src="imagenes/bandera.png" width="50" height="50" >
@@ -103,6 +103,10 @@
                   <label for="input-4">Opinion</label>
                   <textarea class="form-control" id="input-4" style="color: black;"></textarea>
                 </div>
+                <div class="form-group mb-5">
+                  <label for="input-5">Valoración</label>
+                  <input type="range" class="form-range" id="input-5" style="color: black;" max="5" min="0" step="1">
+                </div>
                 <button id="guardar-bot" class="btn"
                   style="background-color: black; border-radius: 15px;">Guardar</button>
                 <a id="cancelar-bot" class="btn" style="background-color: black;border-radius: 15px">Cancelar</a>
@@ -112,14 +116,14 @@
           <div><h3 style="margin: auto; width: 40rem;">Comentarios</h3></div>
             <div class="card m-5 mx-auto" id="cartac-0" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
               <div class="card-body">
-                <h4><strong>Carmen</strong></h4>
+                <h4><strong>Carmen</strong> | 4 &#8902;</h4>
                 <p>La verdad que me ha parecido que el coche esta muy bien, buenas prestaciones y muy fiable para todo tipo de situaciones</p>
                 <p style="font-size: small;">comprado en Concesionario de la Calle Umberto</p>
               </div>
             </div>
             <div class="card m-5 mx-auto" id="cartac-1" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
               <div class="card-body">
-                <h4><strong>Raúl</strong></h4>
+                <h4><strong>Raúl</strong> | 3 &#8902;</h4>
                 <p>Mucha rapidez con los tramites en el concesionario de Morello y el coche muy practico y sin problemas de uso</p>
                 <p style="font-size: small;">comprado en Concesionario de la Calle Morello</p>
               </div>
