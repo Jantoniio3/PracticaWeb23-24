@@ -1,5 +1,5 @@
 import express from 'express';
-import {dataLabels,data,addPlace,getPlace,delPlace,uptPlace,datalength} from './placesService.js';
+//import {dataLabels,data,addPlace,getPlace,delPlace,uptPlace,datalength} from './placesService.js';
 
 const router = express.Router();
 
