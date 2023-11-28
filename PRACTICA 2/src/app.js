@@ -2,7 +2,7 @@ import express from 'express';
 import mustacheExpress from 'mustache-express';
 import bodyParser from 'body-parser';
 import { __dirname } from './dirname.js';
-import router from './router.js';
+import {router} from './router.js';
 
 const app = express();
 
@@ -12,9 +12,9 @@ app.engine('mustache', mustacheExpress());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname + '/../css'));
+app.use(express.static(__dirname + '/../assets/css'));
 app.use(express.static(__dirname + '/../public'));
-app.use(express.static(__dirname + '/../assets'));
+
 
 app.use('/', router);
 
