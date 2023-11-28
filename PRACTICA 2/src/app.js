@@ -12,7 +12,7 @@ app.engine('mustache', mustacheExpress());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname + '/../assets/css'));
+
 app.use(express.static(__dirname + '/../public'));
 
 
