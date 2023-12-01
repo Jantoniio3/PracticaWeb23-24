@@ -8,6 +8,8 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
-
+router.get('/form', (req, res) => {
+    res.render('form');
+});
 
 
