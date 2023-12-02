@@ -59,6 +59,7 @@
         </div>
         <!--/.bg-holder-->
         <section>
+          {{#coche}}
           <div id="carta-0" class="card" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
             <img class="card-img-top colu"
               src="{{Imagen}}"
@@ -88,7 +89,7 @@
                 principal</a>
             </div>
           </div>
-
+          {{/coche}}
           <div id="carta-1" class="card m-5 mx-auto"
             style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
             <div class="card-body">
@@ -117,20 +118,18 @@
             </div>
           </div>
           <div><h3 style="margin: auto; width: 40rem;">Comentarios</h3></div>
+
+            {{#reviews}}
+
             <div class="card m-5 mx-auto" id="cartac-0" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
               <div class="card-body">
-                <h4><strong>Carmen</strong> | 4 &#8902;</h4>
-                <p>La verdad que me ha parecido que el coche esta muy bien, buenas prestaciones y muy fiable para todo tipo de situaciones</p>
-                <p style="font-size: small;">comprado en Concesionario de la Calle Umberto</p>
+                <h4><strong>{{Comprador}}</strong> | {{Valoracion}} &#8902;</h4>
+                <p>{{Opinion}}</p>
+                <p style="font-size: small;">comprado en Concesionario {{Concesionario}}</p>
               </div>
             </div>
-            <div class="card m-5 mx-auto" id="cartac-1" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
-              <div class="card-body">
-                <h4><strong>Raúl</strong> | 3 &#8902;</h4>
-                <p>Mucha rapidez con los tramites en el concesionario de Morello y el coche muy practico y sin problemas de uso</p>
-                <p style="font-size: small;">comprado en Concesionario de la Calle Morello</p>
-              </div>
-            </div>
+
+          {{/reviews}}
         </section>
     </main>
   </body>

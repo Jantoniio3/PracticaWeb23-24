@@ -19,12 +19,13 @@ router.get('/detalles/:matricula', (req, res) => {
         if (coches2.get(x).Matricula == matricula){
             console.log("coche encontrado");
             coche = coches2.get(x)
-            console.log(coche)
         }
     }
-    
 
-    res.render('detalles',coche);
+    let reseñas = Array.from(coche.Opinion.values())
+    console.log(reseñas)
+
+    res.render('detalles',{coche, reviews: reseñas });
 });
 
 router.get('/', (req, res) => {
