@@ -5,9 +5,31 @@ import {coches2} from './service.js';
  export const router = express.Router();
 
 //LA URL QUE SE VA A EJECUTAR SIEMPRE QUE SE CARGUE LA PÁGINA
+
+
+router.get('/detalles/:matricula', (req, res) => {
+    const matricula = req.params.matricula;
+    let coche = null;
+    
+    if (matricula == 'index.html') {
+        return res.redirect('/');
+    }
+
+    for(let x = 0; x < coches2.size; x++){
+        if (coches2.get(x).Matricula == matricula){
+            console.log("coche encontrado");
+            coche = coches2.get(x)
+            console.log(coche)
+        }
+    }
+    
+
+    res.render('detalles',coche);
+});
+
 router.get('/', (req, res) => {
     const elementos =  Array.from(coches2.values());
-    console.log(elementos)
+    
 
     res.render('index', {message: "Hola ahi van los elementos", elementos});
 });
@@ -15,5 +37,3 @@ router.get('/', (req, res) => {
 router.get('/form', (req, res) => {
     res.render('form');
 });
-
-

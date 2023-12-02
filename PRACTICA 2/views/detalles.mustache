@@ -33,8 +33,8 @@
     <main class="main" id="top">
       <nav style="background-color: black;" class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
         data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand d-inline-flex" href="index.html">
-          <img src="imagenes/bandera.png" width="50" height="50" >
+        <div class="container"><a class="navbar-brand d-inline-flex" href="/">
+          <img src="../imagenes/bandera.png" width="50" height="50" >
           <span class="text-light fs-2 fw-bold ms-2">URJC MOTORS</span></a>
         </div>
       </nav>
@@ -48,7 +48,7 @@
             <div class="row">
               <div class="row justify-content-center align-items-center" style="min-height: 20vh;">
                 <div class="col text-center">
-                  <img src="imagenes/Black and Green Modern Automotive Logo (1).png" alt="Imagen centrada" class="img-fluid">
+                  <img src="../imagenes/Black and Green Modern Automotive Logo (1).png" alt="Imagen centrada" class="img-fluid">
                 </div>
               </div>
             </div>
@@ -61,27 +61,30 @@
         <section>
           <div id="carta-0" class="card" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
             <img class="card-img-top colu"
-              src="https://www.infomotor.es/asset/thumbnail,1280,720/media/infomotor/images/2021/06/09/infomotor-seat-ibiza-1.jpg"
+              src="{{Imagen}}"
               style="border-radius: 15px; width: 250px; margin: auto;">
             <div class="card-body">
-              <h5 class="card-title">Seat Ibiza FR</h5>
+              <h5 class="card-title">{{Nombre}}</h5>
               <ul>
                 <li>
-                  <strong>Año de fabricación</strong>: 2022
+                  <strong>Año de fabricación</strong>:{{Year}}
                 </li>
                 <li>
-                  <strong>Color:</strong>: Rojo
+                  <strong>Color</strong>:{{Color}}
                 </li>
                 <li>
-                  <strong>Motor:</strong>: 1.5 TSI
+                  <strong>Motor</strong>: {{Motor}}
                 </li>
                 <li>
-                  <strong>Caballos:</strong> 150
+                  <strong>Caballos</strong>: {{Caballos}}
+                </li>
+                <li>
+                  <strong>Matrícula</strong>:{{Matricula}}
                 </li>
               </ul>
               <button class="btn btn-primary" style="border-radius: 15px;background-color: black;">Borrar</button>
               <button class="btn btn-primary" style="border-radius: 15px;background-color: black;">Editar</button>
-              <a href="index.html" class="btn btn-primary" style="border-radius: 15px; background-color: black">Página
+              <a href="/" class="btn btn-primary" style="border-radius: 15px; background-color: black">Página
                 principal</a>
             </div>
           </div>
