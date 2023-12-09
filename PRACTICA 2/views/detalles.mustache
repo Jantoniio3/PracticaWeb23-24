@@ -83,18 +83,23 @@
                   <strong>Matrícula</strong>:{{Matricula}}
                 </li>
               </ul>
-              <button class="btn btn-primary" style="border-radius: 15px;background-color: black;">Borrar</button>
-              <button class="btn btn-primary" style="border-radius: 15px;background-color: black;">Editar</button>
+              <form action="/deleteCar/{{Matricula}}" method="post">
+                <button class="btn btn-primary" style="border-radius: 15px;background-color: black;" type="submit" >Borrar</button>
+              </form>
+              <form action="/editCar/{{Matricula}}">
+                <button class="btn btn-primary" style="border-radius: 15px;background-color: black;" type="submit">Editar</button>
+              </form>
               <a href="/" class="btn btn-primary" style="border-radius: 15px; background-color: black">Página
                 principal</a>
             </div>
           </div>
-          {{/coche}}
+          
           <div id="carta-1" class="card m-5 mx-auto"
             style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
             <div class="card-body">
               <h5 class="card-title"> Añade una reseña </h5>
-              <form action="/addCom" method="post">
+              <form action="/addCom/{{Matricula}}" method="post">
+              {{/coche}}
                 <div class="form-group mb-3">
                   <label for="Comprador">Comprador</label>
                   <input class="form-control" id="Comprador" name="Comprador" style="color: black;">

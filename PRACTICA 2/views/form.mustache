@@ -51,7 +51,54 @@
         <div class="bg-holder"
           style="background-image:url(assets/img/gallery/header-bg.png);background-position:right top;background-size:contain;">
         </div>
-      
+      {{#forms}}
+        <section>
+          <div class="card" style="width: 25rem; border-radius: 25px; background-color: maroon; margin:auto">
+            <div class="card-body">
+              <form action="/updateEdit/{{Matricula}}" method="post">
+                <div class="form-group">
+                  <label for="Nombre">Nombre</label>
+                  <input class="form-control" id="Nombre" name="Nombre" style="color: black;" required>
+                </div>
+                <div class="form-group">
+                  <label for="Year">Año de fabricación</label>
+                  <input class="form-control" id="Year" name="Year"  type ="number" style="color: black;" min="1950" max="2024"  required>
+                </div>
+                <div class="form-group">
+                  <label for="Imagen">URL Imagen</label>
+                  <input class="form-control" id="Imagen" name="Imagen" type="url" style="color: black;" required>
+                </div>
+                <div class="form-group">
+                  <label for="Color">Color</label>
+                  <input class="form-control form-control-color" type="color" id="Color" name="Color" style="border-radius: 15px;" required>
+                </div>
+                <div class="form-group">
+                  <label for="Motor">Motor</label>
+                  <input class="form-control" id="Motor" name="Motor" style="color: black;" required>
+                </div>
+                <div class="form-group ">
+                  <label for="Caballos">Caballos</label>
+                  <select class="form-control" id="Caballos" name="Caballos" style="color: black;" required>
+                    <option selected>Rango de caballos &#8595;</option>
+                    <option value="1">80-120</option>
+                    <option value="2">120-160</option>
+                    <option value="3">160-200</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="Matricula">Matrícula</label>
+                  <input class="form-control" id="Matricula" name="Matricula" style="color: black;" pattern="[0-9]{4} [A-Z]{3}" required>
+                </div>
+                <button id="guardar-bot" class="btn m-3 ms-5"
+                  style="background-color: black; border-radius: 15px;" type="submit">Guardar</button>
+                <a id="cancelar-bot" class="btn m-3" style="background-color: black;border-radius: 15px"
+                  href="/">Cancelar</a>
+              </form>
+            </div>
+          </div>
+        </section>
+      {{/forms}}
+      {{^forms}}
         <section>
           <div class="card" style="width: 25rem; border-radius: 25px; background-color: maroon; margin:auto">
             <div class="card-body">
@@ -97,6 +144,7 @@
             </div>
           </div>
         </section>
+      {{/forms}}
     </main>
   </body>
 </html>
