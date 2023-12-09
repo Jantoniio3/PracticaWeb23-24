@@ -6,10 +6,11 @@ import {coches2} from './service.js';
 
 //LA URL QUE SE VA A EJECUTAR SIEMPRE QUE SE CARGUE LA PÁGINA
 let counter = 12;
+let rescounter = 1;
 
 router.get('/detalles/:matricula', (req, res) => {
     const matricula = req.params.matricula;
-
+    let ident = null;
     let coche = null;
     
     if (matricula == 'index.html') {
@@ -20,6 +21,7 @@ router.get('/detalles/:matricula', (req, res) => {
         if (coches2.get(x).Matricula == matricula){
             
             coche = coches2.get(x);
+            ident = x; 
             console.log(coche);
         }
     }
@@ -36,6 +38,19 @@ router.get('/detalles/:matricula', (req, res) => {
         res.render('detalles',{coche, reviews: reseñas });
 
     }
+    
+    router.post('/addCom', (req, res) => {
+        const {Comprador, Concesionario, Opinion, Valoracion} = req.body;
+
+        const newRes = {Comprador, Concesionario, Opinion, Valoracion};
+        console.log(newRes);
+        coche.Opinion.set(rescounter,newRes);
+        coches2.set(ident,coche)
+        rescounter +=1 ;
+        res.redirect("/");
+    });
+
+
 });
 
 router.get('/', (req, res) => {
