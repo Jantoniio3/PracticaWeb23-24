@@ -44,8 +44,14 @@ router.get('/detalles/:matricula', (req, res) => {
 
         const newRes = {Comprador, Concesionario, Opinion, Valoracion};
         console.log(newRes);
-        coche.Opinion.set(rescounter,newRes);
-        coches2.set(ident,coche)
+        if (coche.Opinion){
+            coche.Opinion.set(rescounter,newRes);
+            coches2.set(ident,coche)
+        }
+        else{
+            coche.Opinion = new Map();
+            coche.Opinion.set(rescounter, newRes);
+        }
         rescounter +=1 ;
         res.redirect("/");
     });
