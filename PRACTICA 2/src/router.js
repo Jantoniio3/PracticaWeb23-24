@@ -55,7 +55,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/form', (req, res) => {
-    let forms = {}
+    let forms = undefined
     res.render('form',{forms: forms});
 });
 

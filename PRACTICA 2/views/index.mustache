@@ -57,7 +57,7 @@
         <!-- ===============================================-->
 
         <div class="row ">
-          <h3>{{message}}</h3>
+          
           
           {{#elementos}}
             <div class="col">
@@ -73,7 +73,10 @@
             </a>
             </div>
           {{/elementos}}
+          {{^elementos}}
+            <h4>No hay coches</h4>
 
+          {{/elementos}}
           
 
           
