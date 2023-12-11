@@ -75,7 +75,7 @@ router.post('/addCar', (req, res) => {
     /*console.log(newCar);*/
     coches2.set(counter,newCar);
     counter += 1;
-    res.redirect("/");
+    res.redirect(`/detalles/${Matricula}`);
 });
 
 router.post('/deleteCar/:matricula', (req, res) => {
