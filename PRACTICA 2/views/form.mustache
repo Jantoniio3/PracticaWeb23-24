@@ -51,15 +51,15 @@
               <form action="/updateEdit/{{Matricula}}" method="post">
                 <div class="form-group">
                   <label for="Nombre">Nombre</label>
-                  <input class="form-control"  id="Nombre" name="Nombre" style="color: black;" required>
+                  <input class="form-control"  id="Nombre" name="Nombre" style="color: black;" value="{{Nombre}}" required>
                 </div>
                 <div class="form-group">
                   <label for="Year">Año de fabricación</label>
-                  <input placeholder="1986" class="form-control" id="Year" name="Year"  type ="number" style="color: black;" min="1950" max="2024"  required>
+                  <input placeholder="1986" class="form-control" id="Year" name="Year"  type ="number" style="color: black;" min="1950" max="2024" value="{{Year}}" required>
                 </div>
                 <div class="form-group">
                   <label for="Imagen">URL Imagen</label>
-                  <input class="form-control" id="Imagen" name="Imagen" type="url" style="color: black;" required>
+                  <input class="form-control" id="Imagen" name="Imagen" type="url" style="color: black;" value="{{Image}}" required>
                 </div>
                 <div class="form-group">
                   <label for="Color">Color</label>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Motor">Motor</label>
-                  <input class="form-control" id="Motor" name="Motor" style="color: black;" required>
+                  <input class="form-control" id="Motor" name="Motor" style="color: black;" value="{{Motor}}" required>
                 </div>
                 <div class="form-group ">
                   <label for="Caballos">Caballos</label>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Matricula">Matrícula</label>
-                  <input class="form-control" id="Matricula" name="Matricula" style="color: black;" pattern="[0-9]{4} [A-Z]{3}" required>
+                  <input class="form-control" id="Matricula" name="Matricula" style="color: black;" value="{{Matt}}" pattern="[0-9]{4} [A-Z]{3}" required>
                 </div>
                 <button id="guardar-bot" class="btn m-3 ms-5"
                   style="background-color: black; border-radius: 15px;" type="submit">Guardar</button>

@@ -62,7 +62,18 @@ router.get('/form', (req, res) => {
 
 router.get('/editCar/:matricula', (req, res) => {
     const matricula = req.params.matricula;
-    let forms = {Matricula: matricula}
+    let numcoche = 0;
+    for (let [x, coche] of coches2){
+
+        if(coche.Matricula == matricula){
+            numcoche = x;
+        }
+
+    }
+    const cocheplaceholder = coches2.get(numcoche)
+
+    let forms = {Matricula: matricula, Nombre:cocheplaceholder.Nombre, Matt:cocheplaceholder.Matricula, Motor:cocheplaceholder.Motor, Year:cocheplaceholder.Year, Image:cocheplaceholder.Imagen}
+    
     res.render('form', {forms: forms});
 
 });
