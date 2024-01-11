@@ -7,6 +7,8 @@ import {coches2} from './service.js';
 //LA URL QUE SE VA A EJECUTAR SIEMPRE QUE SE CARGUE LA PÁGINA
 let counter = 12;
 let rescounter = 1;
+export let loadCount = 5;
+
 
 router.get('/detalles/:matricula', (req, res) => {
     let matricula = req.params.matricula;
@@ -48,7 +50,7 @@ router.get('/detalles/:matricula', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-    const elementos =  Array.from(coches2.values());
+    const elementos =  Array.from(coches2.values()).slice(0,5);
     
 
     res.render('index', {message: "Hola ahi van los elementos", elementos});
@@ -158,4 +160,11 @@ router.post('/updateEdit/:matricula', (req, res) => {
     coches2.set(id,newCar);
     
     res.redirect("/");
+});
+router.get('/cargarMas:Numero', (req, res) => {
+    const inicio = req.params.Numero;
+    const elementos =  Array.from(coches2.values()).slice(inicio,inicio+5);
+    
+
+    res.json({elementos});
 });

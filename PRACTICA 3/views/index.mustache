@@ -11,12 +11,14 @@
     <!-- ===============================================-->
     <!--             TITULO DE LA PAGINA                -->
     <!-- ===============================================-->
+    
     <title>URJC MOTORS</title>
 
     <!-- ===============================================-->
     <!--             HOJA DE ESTILOS                    -->
     <!-- ===============================================-->
     <link href="/css/theme.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/funciones.mjs"></script>
   </head>
 
   <body>
@@ -29,6 +31,9 @@
           <img src="imagenes/bandera.png" width="50" height="50" >
           <span class="text-light fs-2 fw-bold ms-2">URJC MOTORS</span></a>
           <a href="/form" class="btn btn-primary" style="border-radius: 15px; background-color: rgb(199, 107, 3)">Nuevo Coche</a>
+          <div>
+            <button class="btn btn-primary" style="border-radius: 15px;background-color: red;" onclick="cargarMas()" type="button">Cargar</button>
+          </div>
         </div>
       </nav>
 
@@ -56,7 +61,7 @@
         <!--             Primera fila de elmentos           -->
         <!-- ===============================================-->
 
-        <div class="row ">
+        <div class="row " id ="contenedor-principal">
           
           
           {{#elementos}}
@@ -73,14 +78,11 @@
             </a>
             </div>
           {{/elementos}}
-
-            <button class="btn btn-primary mt-3"></button>
+            
           {{^elementos}}
             <h4>No hay coches</h4>
 
           {{/elementos}}
-          
-
           
 
           
