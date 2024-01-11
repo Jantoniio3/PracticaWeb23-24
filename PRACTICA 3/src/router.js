@@ -1,6 +1,6 @@
 import express from 'express';
 import {coches2} from './service.js';
-//import {dataLabels,data,addPlace,getPlace,delPlace,uptPlace,datalength} from './placesService.js';
+
 
  export const router = express.Router();
 
