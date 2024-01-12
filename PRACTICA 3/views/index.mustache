@@ -19,6 +19,7 @@
     <!-- ===============================================-->
     <link href="/css/theme.css" rel="stylesheet" type="text/css"/>
     <script src="/js/funciones.mjs"></script>
+    <script src="/js/mantenimientoCoches.js"></script>
   </head>
 
   <body>
@@ -27,12 +28,13 @@
     <!-- ===============================================-->
     <main class="main" id="top">
       <nav style="background-color: black;" class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand d-inline-flex" href="/">
-          <img src="imagenes/bandera.png" width="50" height="50" >
-          <span class="text-light fs-2 fw-bold ms-2">URJC MOTORS</span></a>
+        <div class="container">
+          <a class="navbar-brand d-inline-flex" onclick="cargarAhora()" href="#">
+            <img src="imagenes/bandera.png" width="50" height="50" >
+            <span class="text-light fs-2 fw-bold ms-2">URJC MOTORS</span></a>
           <a href="/form" class="btn btn-primary" style="border-radius: 15px; background-color: rgb(199, 107, 3)">Nuevo Coche</a>
           <div>
-            <button class="btn btn-primary" style="border-radius: 15px;background-color: red;" onclick="cargarMas()" type="button">Cargar</button>
+            <button class="btn btn-primary" style="border-radius: 15px;background-color: red;" onclick="cargarMas(); updateLoad()" type="button">Cargar</button>
           </div>
         </div>
       </nav>

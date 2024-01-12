@@ -163,7 +163,11 @@ router.post('/updateEdit/:matricula', (req, res) => {
 });
 router.get('/cargarMas:Numero', (req, res) => {
     const inicio = req.params.Numero;
-    const elementos =  Array.from(coches2.values()).slice(inicio,inicio+5);
+    const final = parseInt(inicio)+5;
+    let elementos =  Array.from(coches2.values()).slice(inicio,final);
+    
+    loadCount+=5;
+
     
 
     res.json({elementos});
@@ -174,4 +178,13 @@ router.get('/cargarInicio', (req, res) => {
     
 
     res.json({elementos});
+});
+router.get('/cargarHastaAhora:Numero', (req, res) => {
+    const inicio = 0;
+    const final = parseInt(req.params.Numero);
+    const elementos =  Array.from(coches2.values()).slice(inicio,final);
+    
+    
+    res.json({elementos});
+    
 });

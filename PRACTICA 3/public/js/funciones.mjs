@@ -1,7 +1,7 @@
 
 let loadCount = 5
-cargarInicio();
 
+cargarInicio();
 
 
 
@@ -41,6 +41,7 @@ async function cargarInicio(){
 
 async function cargarMas(){
     const response = await fetch(`/cargarMas${loadCount}`);
+    
     const part = await response.json();
     const elementosContainer = document.getElementById("contenedor-principal")
     part.elementos.forEach(elemento => {
@@ -67,7 +68,7 @@ async function cargarMas(){
 
 
     loadCount+=5;
-
+    
 
 
 
