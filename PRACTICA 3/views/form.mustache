@@ -98,7 +98,7 @@
               <form action="/addCar" method="post">
                 <div class="form-group">
                   <label for="Nombre">Nombre</label>
-                  <input class="form-control" id="Nombre" name="Nombre" style="color: black;" required>
+                  <input class="form-control" id="Nombre" name="Nombre" style="color: black;" pattern="[A-Z][a-zA-Z]*" title="El nombre debe comenzar con mayúscula y solo puede contener letras" required>
                 </div>
                 <div class="form-group">
                   <label for="Year">Año de fabricación</label>

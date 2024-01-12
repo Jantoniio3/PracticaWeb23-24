@@ -50,10 +50,10 @@ router.get('/detalles/:matricula', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-    const elementos =  Array.from(coches2.values()).slice(0,5);
+    /*const elementos =  Array.from(coches2.values()).slice(0,5);*/
     
 
-    res.render('index', {message: "Hola ahi van los elementos", elementos});
+    res.render('index'/*, {message: "Hola ahi van los elementos", elementos}*/);
 });
 
 router.get('/form', (req, res) => {
@@ -163,6 +163,13 @@ router.post('/updateEdit/:matricula', (req, res) => {
 });
 router.get('/cargarMas:Numero', (req, res) => {
     const inicio = req.params.Numero;
+    const elementos =  Array.from(coches2.values()).slice(inicio,inicio+5);
+    
+
+    res.json({elementos});
+});
+router.get('/cargarInicio', (req, res) => {
+    const inicio = 0
     const elementos =  Array.from(coches2.values()).slice(inicio,inicio+5);
     
 
