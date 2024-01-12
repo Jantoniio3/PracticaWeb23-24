@@ -1,13 +1,15 @@
 
 let loadCount = 5
 
-cargarInicio();
+
+cargarInicio(loadCount);
 
 
 
 
-async function cargarInicio(){
-    const response = await fetch(`/cargarInicio`);
+async function cargarInicio(contador){
+    
+    const response = await fetch(`/cargarInicio${contador}`);
     const part = await response.json()
     const elementosContainer = document.getElementById("contenedor-principal");
     part.elementos.forEach(elemento => {

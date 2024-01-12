@@ -172,9 +172,10 @@ router.get('/cargarMas:Numero', (req, res) => {
 
     res.json({elementos});
 });
-router.get('/cargarInicio', (req, res) => {
+router.get('/cargarInicio:Numero', (req, res) => {
     const inicio = 0
-    const elementos =  Array.from(coches2.values()).slice(inicio,inicio+5);
+    const final = parseInt(req.params.Numero);
+    const elementos =  Array.from(coches2.values()).slice(inicio,final);
     
 
     res.json({elementos});

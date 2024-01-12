@@ -9,7 +9,7 @@ function updateLoad(){
 }
 
 async function cargarAhora(){
-    
+    console.log("ocurre")
     const response = await fetch(`/cargarHastaAhora${loadCounter}`);
     const part = await response.json();
     const elementosContainer = document.getElementById("contenedor-principal");
