@@ -53,7 +53,7 @@ router.get('/', (req, res) => {
     /*const elementos =  Array.from(coches2.values()).slice(0,5);*/
     
 
-    res.render('index'/*, {message: "Hola ahi van los elementos", elementos}*/);
+    res.render('index', {message: `${loadCount}`});
 });
 
 router.get('/form', (req, res) => {

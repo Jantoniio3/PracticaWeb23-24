@@ -1,5 +1,5 @@
 
-let loadCount = 5
+let loadCount = parseInt(document.getElementById("coches-cargados").innerText)
 
 
 cargarInicio(loadCount);

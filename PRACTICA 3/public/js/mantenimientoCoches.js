@@ -6,6 +6,12 @@ let loadCounter = 5
 
 function updateLoad(){
     loadCounter+=5;
+    console.log(loadCounter,"es  el loadcounter de mantenimiento");
+}
+
+function mandarCounter(){
+    return loadCounter
+
 }
 
 async function cargarAhora(){
