@@ -189,3 +189,22 @@ router.get('/cargarHastaAhora:Numero', (req, res) => {
     res.json({elementos});
     
 });
+
+router.get('/cargarOpinion:Matricula', (req, res) => {
+    const matricula = req.params.Matricula;
+    let id = 0;
+    for (let [x, coche] of coches2){
+
+        if(coche.Matricula == matricula){
+            id = x;
+        }
+
+    }
+    let coche = coches2.get(id) 
+    
+    const elementos =  Array.from(coche.Opinion.values());
+    
+    
+    res.json({elementos});
+    
+});

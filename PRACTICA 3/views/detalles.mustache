@@ -21,6 +21,7 @@
       <!--             HOJA DE ESTILOS                    -->
       <!-- ===============================================-->
     <link href="/css/theme.css" rel="stylesheet" type="text/css"/>
+    
 
   </head>
 
@@ -74,6 +75,7 @@
                 </li>
                 <li>
                   <strong>Matrícula</strong>:{{Matricula}}
+                  <a id ="matricula-coche" style="display: none">{{Matricula}}</a>
                 </li>
               </ul>
               <form action="/deleteCar/{{Matricula}}" method="post">
@@ -116,19 +118,21 @@
             </div>
           </div>
           <div><h3 style="margin: auto; width: 40rem;">Comentarios</h3></div>
-
+            <div id="contenedor-comentarios">
             {{#reviews}}
-
-            <div class="card m-5 mx-auto" id="cartac-0" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
-              <div class="card-body">
-                <h4><strong>{{Comprador}}</strong> | {{Valoracion}} &#8902;</h4>
-                <p>{{Opinion}}</p>
-                <p style="font-size: small;">comprado en Concesionario {{Concesionario}}</p>
+            <!--
+              <div class="card m-5 mx-auto" id="opinion-{{Comprador}}-{{Concesionario}}" style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
+                <div class="card-body">
+                  <h4><strong>{{Comprador}}</strong> | {{Valoracion}} &#8902;</h4>
+                  <p>{{Opinion}}</p>
+                  <p style="font-size: small;">comprado en Concesionario {{Concesionario}}</p>
+                </div>
               </div>
-            </div>
-
+            -->
           {{/reviews}}
+            </div>
         </section>
+        <script src="/js/detalles.js"></script>
     </main>
   </body>
 </html>
