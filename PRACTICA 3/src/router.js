@@ -239,3 +239,36 @@ router.get('/borrarOpinion', (req, res) => {
     res.send(comprador+'-'+concesionario);
     
 });
+router.get('/crearOpinion', (req, res) => {
+    const Comprador = req.query.comprador;
+    const Concesionario = req.query.concesionario;
+    const Opinion = req.query.opinion;
+    const Valoracion = req.query.valoracion;
+    const matricula = req.params.matricula;
+    let id = 0;
+    console.log(Comprador)
+    const newRes = {Comprador, Concesionario, Opinion, Valoracion};
+    
+    for (let [x, coche] of coches2){
+
+        if(coche.Matricula == matricula){
+            id = x;
+        }
+
+    }
+    let coche = coches2.get(id)
+
+    if (coche.Opinion){
+        coche.Opinion.set(rescounter,newRes);
+        coches2.set(id,coche)
+        
+    }
+    else{
+        coche.Opinion = new Map();
+        coche.Opinion.set(rescounter, newRes);
+        coches2.set(id, coche);
+    }
+    let elementos = coche.Opinion.get(rescounter)
+    rescounter +=1 ;
+    res.json({elementos});
+});

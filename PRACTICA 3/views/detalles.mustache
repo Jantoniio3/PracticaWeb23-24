@@ -93,7 +93,7 @@
             style="width: 40rem; border-radius: 25px; background-color: maroon; margin:auto">
             <div class="card-body">
               <h5 class="card-title"> Añade una reseña </h5>
-              <form action="/addCom/{{Matricula}}" method="post">
+              <form id="fomulario-comentarios">
               {{/coche}}
                 <div class="form-group mb-3">
                   <label for="Comprador">Comprador</label>
@@ -112,7 +112,7 @@
                   <input type="range" class="form-range" id="Valoracion" name="Valoracion" style="color: black;" max="5" min="0" step="1">
                 </div>
                 <button id="guardar-bot" class="btn"
-                  style="background-color: black; border-radius: 15px;" type="submit">Guardar</button>
+                  style="background-color: black; border-radius: 15px;" type="button" >Guardar</button>
                 <a id="cancelar-bot" class="btn" style="background-color: black;border-radius: 15px" href="/">Cancelar</a>
               </form>
             </div>

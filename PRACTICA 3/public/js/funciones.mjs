@@ -75,3 +75,29 @@ async function cargarMas(){
 
 
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let barra = document.getElementById("barraBuscadora");
+    let contenedordecoches = document.getElementById("contenedor-principal");
+    let cartas = contenedordecoches.getElementsByClassName("col");
+    barra.addEventListener("input",function () {
+        let palabras = barra.value.toLowerCase();
+
+        for (let i = 0; i < cartas.length; i++) {
+            let nombrecarta = cartas[i].querySelector(".fs-2").innerText.toLowerCase();
+
+            if (palabras === "" || nombrecarta.includes(palabras)) {
+                cartas[i].style.display = "block";
+            } else {
+                cartas[i].style.display = "none";
+            }
+        }
+
+        
+
+
+
+    });
+});
+
+
