@@ -96,6 +96,6 @@ async function cargarOpinion(matricula){
 }
 
 
-
+   
 
 
