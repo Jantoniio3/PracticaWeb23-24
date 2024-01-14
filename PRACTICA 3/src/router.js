@@ -208,3 +208,34 @@ router.get('/cargarOpinion:Matricula', (req, res) => {
     res.json({elementos});
     
 });
+
+router.get('/borrarOpinion', (req, res) => {
+    const comprador = req.query.comprador;
+    const concesionario = req.query.concesionario;
+    const matricula = req.query.matricula;
+    let identificador =  0;
+    let identificadorOpinion = 0;
+
+    for (let [x, coche] of coches2){
+
+        if(coche.Matricula == matricula){
+            identificador = x;
+        }
+
+    }
+    let coche = coches2.get(identificador)
+    
+    for (let [x, opinion] of coche.Opinion){
+
+        if(opinion.Comprador == comprador && opinion.Concesionario == concesionario){
+            identificadorOpinion = x;
+        }
+
+    }
+    coches2.get(identificador).Opinion.delete(identificadorOpinion)
+    
+
+
+    res.send(comprador+'-'+concesionario);
+    
+});
