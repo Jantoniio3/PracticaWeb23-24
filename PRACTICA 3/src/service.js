@@ -44,8 +44,3 @@ coches.set(10, { Nombre: 'Cupra', Year: '2021', Color:'Gris', Motor: '3.0 GTI', 
 coches.set(11, { Nombre: 'Toyota CHR', Year: '2022', Color:'Blanco', Motor: '1.9 TDI', Caballos:'105', Opinion: resena11, Imagen: 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2023/06/toyota-c-hr-gr-sport-3049412.jpg?tf=3840x', Matricula: '6789 HIJ'});
 
 export let coches2 = coches;
-
-
-
-
-
