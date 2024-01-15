@@ -87,15 +87,4 @@ async function cargarOpinion(matricula){
         elementosContainer.insertAdjacentHTML('beforeend', nuevoElementoHTML);
     });
 
-
-
-
-
-
-
 }
-
-
-   
-
-

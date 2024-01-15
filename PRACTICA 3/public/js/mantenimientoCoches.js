@@ -1,7 +1,4 @@
 
-
-
-
 let loadCounter = 5
 
 function updateLoad(){
@@ -40,17 +37,4 @@ async function cargarAhora(){
 
 
 }
-
-
-
-
-
-
-    
-
-
-
-
-
-
 
