@@ -49,20 +49,12 @@ cargarOpinion(matricula);
 
 
 
-
-
-
-
 async function eliminarOpinion(comprador,concesionario,matricula){
     const response = await fetch(`/borrarOpinion?comprador=${comprador}&concesionario=${concesionario}&matricula=${matricula}`);
     const part = await response.text();
     const contenedor = document.getElementById(part);
 
     contenedor.remove();
-
-
-
-
 
 }
 
